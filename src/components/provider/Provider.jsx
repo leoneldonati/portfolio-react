@@ -1,9 +1,10 @@
 import { createContext } from "react";
 import { v4 as uuidv4 } from "uuid";
-import Img from "../../assets/png/foto.png";
+import Img      from "../../assets/png/foto.png";
 import imgClima from "../../assets/app-weather-1.png";
-import imgList from "../../assets/list-task-2.png";
-import imgRM from "../../assets/r&m-2.png";
+import imgList  from "../../assets/list-task-2.png";
+import imgRM    from "../../assets/r&m-2.png";
+import imgPort  from "../../assets/port-1.png";
 
 const data = {
   header: {
@@ -160,11 +161,11 @@ const data = {
           href: "https://github.com/leoneldonati/lista-de-tareas",
         },
       },
-      //
+      //    RICK AND MORTY
       {
         id: uuidv4(),
-        name: "",
-        img: "",
+        name: "rick-and-morty",
+        img: imgRM,
         link1: {
           svg: (
             <svg
@@ -181,7 +182,7 @@ const data = {
               />
             </svg>
           ),
-          href: "https://leoneldonati.github.io/",
+          href: "https://leoneldonati.github.io/rick-and-morty",
         },
         link2: {
           svg: (
@@ -197,14 +198,14 @@ const data = {
               <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z" />
             </svg>
           ),
-          href: "https://github.com/leoneldonati/",
+          href: "https://github.com/leoneldonati/rick-and-morty",
         },
       },
-      //
+      //    COOP GENESIS  
       {
         id: uuidv4(),
-        name: "",
-        img: "",
+        name: "coop-genesis",
+        img: imgPort,
         link1: {
           svg: (
             <svg
@@ -221,7 +222,7 @@ const data = {
               />
             </svg>
           ),
-          href: "https://leoneldonati.github.io/",
+          href: "https://leoneldonati.github.io/coop-genesis",
         },
         link2: {
           svg: (
@@ -237,47 +238,7 @@ const data = {
               <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z" />
             </svg>
           ),
-          href: "https://github.com/leoneldonati/",
-        },
-      },
-      //
-      {
-        id: uuidv4(),
-        name: "",
-        img: "",
-        link1: {
-          svg: (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="Projects-svg"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fillRule="evenodd"
-                d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
-              />
-            </svg>
-          ),
-          href: "https://leoneldonati.github.io/",
-        },
-        link2: {
-          svg: (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="Projects-svg"
-              viewBox="0 0 16 16"
-            >
-              <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-              <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z" />
-            </svg>
-          ),
-          href: "https://github.com/leoneldonati/",
+          private: true
         },
       },
       //

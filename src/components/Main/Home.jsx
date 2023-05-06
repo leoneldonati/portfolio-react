@@ -1,12 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import './Home.css';
 import Projects from "./Projects/Projects";
 import About from "./About/About";
+import { GlobalContext } from "../provider/Provider";
 
 const Home = () => {
 
+
+    // 		DATOS DEL PROVIDER
+    const {header, main} = useContext(GlobalContext);
+    const {ul1} = header;
+
+
+    // 		MANEJO DE INTERFACES Y ESTADOS
 	const [project, setProject] = useState(false);
-    const [about, setAbout] = useState(false);
+    const [about, setAbout] 	= useState(false);
 
 
     const handleProject  = () => {
@@ -25,39 +33,50 @@ const Home = () => {
     	if (!project && !about) {
     		return(
     			<section className="Home">
-    				Home
+    				<h1 className="Home-h1">{main.title}</h1>
+    				<h2 className="Home-h2">{main.subtitle}</h2>
     			</section>
     			);
     	};
     };
 
+
+   
+
+
+
 	return (
 		<main className="Main">
 
 		{/*	HEADER */}
-		  <header className="Header">
-            <nav className="Header-nav">
-                <ul className="Header-ul__1">
-                    <li><a href="#" className="Header-a" title="Item1">Item1</a></li>
-                    <li><a href="#" className="Header-a" title="Item2">Item2</a></li>
-                    <li><a href="#" className="Header-a" title="Item3">Item3</a></li>
-                </ul>
-                <ul className="Header-ul__2">
-                    <li><button onClick={handleAbout}>About</button></li>
-                    <li><button onClick={handleProject}>Projects</button></li>
-                </ul>
-            </nav>
-       	 </header>
 		
-
+			<header className="Header">
+                <nav className="Header-nav">
+                    <ul className="Header-ul__1">
+                    {
+                    	ul1.map( ({ id, href, title, svg}) => 
+                    		<li key={id}>
+                    			<a className="Header-a" href={href} title={title} rel="noreferrer noopener" target="_blank">
+                    				{svg}
+                    			</a>
+                    		</li>
+                    	)
+                    }
+                    </ul>
+                    <ul className="Header-ul__2">
+                        <li><button className="Header-btn" onClick={handleAbout}>About</button></li>
+                        <li><button className="Header-btn" onClick={handleProject}>Projects</button></li>
+                    </ul>
+                </nav>
+       		</header>
+		
 		{/* HOME */}
 		
-       	 {handleHome()}
+       		{handleHome()}
 
 		{/* SECTIONS */}
 
-		{hanldeSections()}
-
+			{hanldeSections()}
 		
 		</main>
 
