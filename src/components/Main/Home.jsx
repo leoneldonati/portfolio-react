@@ -1,7 +1,8 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import './Home.css';
 import Projects from "./Projects/Projects";
 import About from "./About/About";
+import Footer from "../Footer/Footer";
 import { GlobalContext } from "../provider/Provider";
 
 const Home = () => {
@@ -31,16 +32,28 @@ const Home = () => {
     };
 
     //      HOME
+
+    const [home, setHome] = useState(' Home__off')
+
+    useEffect(() => {
+        setHome('');
+    },[]);
+
+
     const handleHome 	 = () => {
     	if (!project && !about) {
     		return(
-    			<section className="Home">
+    			<section className={"Home" + home}>
     				<h1 className="Home-h1">{main.title}</h1>
     				<h2 className="Home-h2">{main.subtitle}</h2>
+
+                    <Footer />
     			</section>
     			);
     	};
     };
+
+
 
 
    
@@ -79,6 +92,10 @@ const Home = () => {
 		{/* SECTIONS */}
 
 			{hanldeSections()}
+
+
+
+            
 		
 		</main>
 

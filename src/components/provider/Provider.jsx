@@ -241,7 +241,7 @@ const data = {
           private: true
         },
       },
-      //
+      /*
       {
         id: uuidv4(),
         name: "",
@@ -281,13 +281,13 @@ const data = {
           href: "https://github.com/leoneldonati/",
         },
       },
-      //
+      */
     ],
   },
   about: {
     title: "Sobre Mí",
     description:
-      "Persona autodidacta, enfocada y con constante crecimiento profesional. Mi objetivo es seguir aprendiendo este maravilloso arte que es programar, descubrí este mundo de casualidad y quedé fascinado con tal variedad que habia de herramientas, lenguajes, propósitos e incluso la infinita posibilidad de poder escribir tus ideas en un código e imprimirlo en pantalla. Próximamente desarrollo Full Stack.-",
+      "persona autodidacta, enfocada y con constante crecimiento profesional. Mi objetivo es seguir aprendiendo este maravilloso arte que es programar, descubrí este mundo de casualidad y quedé fascinado con tal variedad que habia de herramientas, lenguajes, propósitos e incluso la infinita posibilidad de poder escribir tus ideas en un código e imprimirlo en pantalla. Próximamente desarrollo Full Stack.-",
     pic: Img,
     links: [
       {
