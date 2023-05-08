@@ -29,6 +29,8 @@ const Home = () => {
     	if (project) {return <Projects />};
     	if (about) {return <About />};
     };
+
+    //      HOME
     const handleHome 	 = () => {
     	if (!project && !about) {
     		return(
@@ -54,7 +56,7 @@ const Home = () => {
                 <nav className="Header-nav">
                     <ul className="Header-ul__1">
                     {
-                    	ul1.map( ({ id, href, title, svg}) => 
+                    	ul1.map( ({ id, href, title, svg }) => 
                     		<li key={id}>
                     			<a className="Header-a" href={href} title={title} rel="noreferrer noopener" target="_blank">
                     				{svg}

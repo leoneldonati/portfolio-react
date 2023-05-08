@@ -12,8 +12,8 @@
 	width: 80%;
 	display: flex;
 	margin: auto;
-	padding: .2em;
-	justify-content: space-evenly;
+	padding: .6em;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -22,9 +22,19 @@
 	flex-flow: row nowrap;
 	gap: 2em;
 	list-style: none;
-	transition: opacity .3s ease;
+	transition: all .3s ease;
 }
-.Header-a {}
+.Header-a {
+	display: block;
+	transition: all .1s ease-in;
+}
+.Header-a:hover {
+	transform: scale(1.3);
+}
+.Header-a:active {
+	transform: scale(.9);
+}
+
 
 .Header-ul__2 {
 	display: flex;
@@ -32,7 +42,23 @@
 	list-style: none;
 	gap: 2em;
 }
-.Header-btn {}
+.Header-btn {
+	display: block;
+	color: var(--color1);
+	background: none;
+	padding: .3em;
+	border-radius: .3em;
+	transition: all .1s ease-in;
+	font-family: var(--fuenteSec);
+	font-weight: bold;
+	font-size: .9em;
+	cursor: pointer;
+}
+.Header-btn:hover {
+	transform: rotateX(-10deg);
+	box-shadow: .1em .2em .2em var(--color1);
+}
+
 .Header-svg {
 	fill: var(--color3);
 	width: 1.5em;
@@ -42,7 +68,7 @@
 
 .Home {
 	width: 100%;
-	min-height: calc(100vh - 6vh);
+	min-height: calc(100vh - 10vh);	
 	display: flex;
 	flex-flow: column;
 	text-align: center;
@@ -51,8 +77,18 @@
 	gap: 1em;
 
 }
-.Home-h1 {}
-.Home-h2 {}
+.Home-h1 {
+	font-family: var(--fuentePr);
+	font-size: 2.4em;
+	color: #606060;
+	margin-top: -1em;
+}
+.Home-h2 {
+	font-size: 2.2em;
+	font-family: var(--fuentePr);
+	color: #606060;
+	transform: translateX(.4em);
+}
 
 
 /* RESPONSIVE HOME & HEADER */

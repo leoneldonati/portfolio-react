@@ -7,4 +7,14 @@
 	--color1: #A9A9A9;
 	--color2: #1c1c1c;
 	--color3: #62165f;
+
+	--fuentePr: 'Bruno Ace SC', cursive;
+	--fuenteSec: 'Hind Madurai', sans-serif;
 }
+body{
+background: rgb(28,28,28);
+background: -moz-linear-gradient(157deg, rgba(28,28,28,1) 49%, rgba(98,22,95,1) 100%, rgba(68,12,65,1) 100%);
+background: -webkit-linear-gradient(157deg, rgba(28,28,28,1) 49%, rgba(98,22,95,1) 100%, rgba(68,12,65,1) 100%);
+background: linear-gradient(157deg, rgba(28,28,28,1) 49%, rgba(98,22,95,1) 100%, rgba(68,12,65,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1c1c",endColorstr="#440c41",GradientType=1);
+}	

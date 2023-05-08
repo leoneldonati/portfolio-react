@@ -64,7 +64,7 @@ const data = {
   },
   main: {
     title: "Leonel Donati",
-    subtitle: "FrontEnd Developer",
+    subtitle: "FrontEnd Dev",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
