@@ -5,6 +5,7 @@ import imgClima from "../../assets/app-weather-1.png";
 import imgList  from "../../assets/list-task-2.png";
 import imgRM    from "../../assets/r&m-2.png";
 import imgPort  from "../../assets/port-1.png";
+import imgCoop  from "../../assets/coop.png";
 
 const data = {
   header: {
@@ -205,7 +206,7 @@ const data = {
       {
         id: uuidv4(),
         name: "coop-genesis",
-        img: imgPort,
+        img: imgCoop,
         link1: {
           svg: (
             <svg

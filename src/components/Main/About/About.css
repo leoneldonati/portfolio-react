@@ -97,6 +97,10 @@
 	.About-p {
 		display: none;
 	}
+	.About-h2 {
+	transform: translateY(-.5em);
+
+	}
 }
 @media only screen and (max-width: 340px) {
 	.About-h2 {

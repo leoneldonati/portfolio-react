@@ -1,41 +1,43 @@
 # Portafolio creado con React JS & Vite JS.
 
-## Animaciones con @keyframes.
+### Se utilizó UUID para mapeo de datos.
+
+
+## Se utilizo * createContext * para creado de contexto global.
 ---
-```css
-/* animacion svg */
-@keyframes jumping {
-  0% {
-    transform: translateY(0);
-  }
+```jsx
+import { createContext } from "react";
+import { v4 as uuidv4 } from "uuid";
 
-  100% {
-    transform: translateY(0.2em);
-  }
-}
-@keyframes filter {
-  0% {
-    filter: drop-shadow(0 0 0.1em var(--color_secundario));
-  }
 
-  100% {
-    filter: drop-shadow(0 0 0.3em var(--color_complementario));
-  }
-}
+const data = {/* DATOS GLOBALES */};
+
+export const GlobalContext = createContext();
+
+export const Provider = ({ children }) => {
+  return (
+    <GlobalContext.Provider value={data}>{children}</GlobalContext.Provider>
+  );
+};
+
 
 ```
->Animación de salto.
+>CONTEXTO GLOBAL APP
 
 ## Capturas de pantalla.
 ---
 
 >Inicio de página
 
-![Inicio de página](./assets/captura.png)
+![Inicio de página](./src/assets/portfolio-1.png)
 
 >Sección sobre mí
 
-![Sección proyectos](./assets/captura-1.png)
+![Sección sobre mí](./src/assets/portfolio-2.png)
+
+>Sección proyectos
+
+![Sección proyectos](./src/assets/portfolio-3.png)
 
 Si gustas mirar mas a fondo el proyecto podes revisar el repo que tengo en GitHub!
 
