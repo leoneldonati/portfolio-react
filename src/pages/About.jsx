@@ -1,5 +1,5 @@
 import "../sass/styles/About.scss";
-import Leo from '../assets/png/foto.png'
+import Leo from "../assets/png/foto.png";
 
 export const About = () => (
   <section className="About">
@@ -7,15 +7,15 @@ export const About = () => (
       <div className="Container--top">
         <div className="Container-img">
           <img src={Leo} alt="Foto Leonel" loading="lazy" />
-          <div className="Back-img"></div>
         </div>
         <div className="Container-description">
           <p className="Container-p">
-          Persona autodidacta, enfocada y con constante crecimiento profesional. <br />
-        Mi objetivo es seguir aprendiendo este maravilloso arte que es programar, descubrí este mundo
-        de casualidad y quedé fascinado con tal variedad que habia de herramientas, lenguajes, propósitos e incluso
-        la infinita posibilidad de poder escribir tus ideas en un código e imprimirlo en pantalla. <br />
-        Próximamente desarrollo Full Stack.-
+            Profesional autodidacta, enfocado y apasionado por el arte de programar. <br />
+            Descubrí este mundo de casualidad y quedé
+            fascinado con la idea de poder crear con código cualquier idea que
+            cruce por mi cabeza. <br />
+            Próximamente dedicado al desarrollo Full Stack Web
+            .-
           </p>
         </div>
       </div>

@@ -1,45 +1,40 @@
-# Portafolio creado con React JS & Vite JS.
+# Portafolio creado con React JS, Vite JS & SASS.
 
-### Se utilizó UUID para mapeo de datos.
+## Repositorios extraidos directamente desde GitHub.
 
+> FETCH
 
-## Se utilizo * createContext * para creado de contexto global.
----
-```jsx
-import { createContext } from "react";
-import { v4 as uuidv4 } from "uuid";
+```javascript
+// fetch de datos a API GITHUB
+export const getRepos = async () => {
+  try {
+    const res = await fetch(URI);
+    const data = await res.json();
 
-
-const data = {/* DATOS GLOBALES */};
-
-export const GlobalContext = createContext();
-
-export const Provider = ({ children }) => {
-  return (
-    <GlobalContext.Provider value={data}>{children}</GlobalContext.Provider>
-  );
+    return data;
+  } catch (err) {
+    console.error(err);
+  }
 };
-
-
 ```
->CONTEXTO GLOBAL APP
 
-## Capturas de pantalla.
 ---
 
->Inicio de página
+## React Router DOM V6
+Enrutado creado con Router DOM, tres rutas principales y una ruta de error.
 
-![Inicio de página](./src/assets/portfolio-1.png)
+> ROUTES
 
->Sección sobre mí
-
-![Sección sobre mí](./src/assets/portfolio-2.png)
-
->Sección proyectos
-
-![Sección proyectos](./src/assets/portfolio-3.png)
+```jsx
+import { Routes, Route } from "react-router-dom";
+<Routes>
+  <Route path="/" element={/* COMPONENT */} />
+  <Route path="/about" element={/* COMPONENT */} />
+  <Route path="/projects" element={/* COMPONENT */} />
+  <Route path="*" element={/* COMPONENT */} />
+</Routes>
+```
 
 Si gustas mirar mas a fondo el proyecto podes revisar el repo que tengo en GitHub!
 
-*Leonel Donati . -*
-
+_Leonel Donati . -_
