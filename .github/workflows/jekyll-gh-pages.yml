@@ -25,7 +25,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://leoneldonati.github.io/
+      url: https://leoneldonati.github.io/portfolio-react
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
