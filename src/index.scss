@@ -4,9 +4,9 @@
 	padding: 0;
 }
 :root {
-	--color1: #A9A9A9;
-	--color2: #1c1c1c;
-	--color3: #62165f;
+	--clr1: #A9A9A9;
+	--clr2: #1c1c1c;
+	--clr3: #62165f;
 
 	--fuentePr: 'Bruno Ace SC', cursive;
 	--fuenteSec: 'Hind Madurai', sans-serif;
@@ -18,3 +18,8 @@ background: -webkit-linear-gradient(157deg, rgba(28,28,28,1) 49%, rgba(98,22,95,
 background: linear-gradient(157deg, rgba(28,28,28,1) 49%, rgba(98,22,95,1) 100%, rgba(68,12,65,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1c1c",endColorstr="#440c41",GradientType=1);
 }	
+
+.Main {
+	max-width: 1440px;
+	margin: auto;
+}

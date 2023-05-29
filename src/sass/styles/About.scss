@@ -1,0 +1,94 @@
+@use "../mixins";
+
+.About {
+  width: 100%;
+  transition: all 1s ease;
+  // RESPONSIVE
+  @media (min-width: 1400px) {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+  }
+  .Container {
+    max-width: 500px;
+    width: 80%;
+    margin: auto;
+    @include mixins.flex(column, center, center);
+    gap: 0.5em;
+    // RESPONSIVE
+    @media (min-width: 1200px) {
+      @include mixins.flex(row, center, center);
+      gap: 2em;
+      max-width: 100%;
+    }
+
+    &--top {
+      background: #1c1c1c;
+      box-shadow: 1em 1em 4em #0b0b0b, -1em -1em 4em #2d2d2d;
+      width: 100%;
+      padding: 0.5em;
+      @include mixins.flex(column, flex-start, center);
+      gap: 1em;
+      border-radius: 1em;
+      //  RESPONSIVE
+      @media (min-width: 1400px) {
+        width: 50%;
+      }
+      @media (max-width: 470px) {
+        @include mixins.flex(column, center, center);
+        gap: 1em;
+      }
+    }
+    &-img {
+      width: 40%;
+      & img {
+        width: 100%;
+        border-radius: 1em;
+        box-shadow: 0 0 0.4em #fff;
+        object-fit: cover;
+      }
+    }
+    &-description {
+      transition: all 0.4s ease;
+      backdrop-filter: blur(1em);
+      color: #fff;
+      height: 100%;
+    }
+    &-p {
+      text-align: start;
+    }
+
+    &--bottom {
+      @include mixins.flex(row, center, flex-start);
+      gap: 10em;
+      height: 100%;
+      width: 100%;
+      background: #1c1c1c;
+      box-shadow: 1em 1em 4em #0b0b0b, -1em -1em 4em #2d2d2d;
+      border-radius: 1em;
+      padding: 1em;
+      // RESPONSIVE
+      @media (max-width: 470px) {
+        @include mixins.flex(column, center, center);
+        gap: 1em;
+        width: 100%;
+      }
+    }
+    &-ul--hardSkills,
+    &-ul--softSkills {
+      @include mixins.flex(column, center, flex-start);
+      gap: 0.5em;
+      width: 100%;
+      // RESPONSIVE
+      @media (min-width: 1400px) {
+        gap: 2em;
+      }
+    }
+
+    .Title-skills {
+      font-size: 1.4em;
+      text-decoration: underline;
+      color: rgba(240, 240, 240, 0.8);
+    }
+  }
+}

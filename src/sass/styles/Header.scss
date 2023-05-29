@@ -1,0 +1,94 @@
+@use "../mixins";
+.Header {
+  width: 100%;
+}
+
+.Container {
+  max-width: 90%;
+  width: 100%;
+  margin: auto;
+  padding: 1em;
+  @include mixins.flex(row nowrap, space-between, center);
+
+  &-svg {
+    width: 1.8em;
+    height: auto;
+
+    transition: all 0.2s ease;
+    &:hover {
+      transform: scale(1.2);
+      fill: #f011ee;
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  // &-nav--1 {}
+  &-ul--1 {
+    @include mixins.flex(row nowrap, space-evenly, center);
+    gap: 1em;
+  }
+  &-a--1 {
+    display: block;
+  }
+
+  // &-nav--2 {}
+  &-ul--2 {
+    position: absolute;
+    @include mixins.flex(column, center, center);
+    top: 10%;
+    right: 2%;
+    padding: 0.7em;
+    background: linear-gradient(145deg, #b5b5b5, #989898);
+    box-shadow: 0 0 1em #989898;
+    border-radius: 1em;
+    z-index: 1;
+    transition: all .3s ease;
+    // RESPONSIVE
+    @media (min-width: 570px) {
+      display: none;
+    }
+  }
+  &-ul2--desktop {
+    @include mixins.flex(row nowrap, space-evenly, center);
+    gap: 1em;
+    // RESPONSIVE
+    @media (max-width: 570px) {
+      display: none;
+    }
+  }
+  & span {
+    display: block;
+    width: 100%;
+    padding: 0.4em 0.5em 0.5em 0.5em;
+    font-size: 1.1em;
+    border: 1px solid transparent;
+
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      border: 1px solid #fff;
+      box-shadow: 0.1em 0.2em 0.1em #fff;
+    }
+    &:active {
+      transform: scale(0.99);
+    }
+  }
+  &-btn {
+    padding: 0.3em;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    // RESPONSIVE
+    @media (min-width: 570px) {
+      display: none;
+    }
+    .Btn-svg {
+      fill: #f011ee;
+      width: 2em;
+      height: auto;
+    }
+  }
+}

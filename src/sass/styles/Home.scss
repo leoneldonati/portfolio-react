@@ -1,0 +1,29 @@
+@use '../mixins';
+.Home {
+    width: 100%;
+    min-height: 80vh;
+    @include mixins.flex(row, center, center);
+
+    &-container {
+        padding: 2em;
+        text-align: center;
+    }
+    &-h1 {
+        font-size: 2.5em;
+    }
+    &-h2 {
+        font-size: 2em;
+        & span {
+            animation: color infinite alternate 2s 2s ease-in-out;
+        }
+
+        @keyframes color {
+            0%   {
+                color: #FFD700;
+            }
+            100% {
+                color: #fff;
+            }
+        }
+    }
+}
