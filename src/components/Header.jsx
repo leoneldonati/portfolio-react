@@ -91,7 +91,7 @@ export const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/">
+              <Link to="/portfolio-react">
                 <span>Home</span>
               </Link>
             </li>
@@ -135,7 +135,7 @@ export const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/">
+              <Link to="/portfolio-react">
                 <span>Home</span>
               </Link>
             </li>
