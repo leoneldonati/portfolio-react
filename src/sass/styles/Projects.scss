@@ -35,7 +35,10 @@
     width: 60%;
     overflow: scroll;
     overflow-x: hidden;
-    height: 70vh;
+    height: 80vh;
+    padding: .5em;
+    border: 2px solid #fff;
+
     // RESPONSIVE
     @media (max-width: 900px) {
       width: 90%;

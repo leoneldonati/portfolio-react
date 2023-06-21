@@ -27,7 +27,7 @@
       box-shadow: 1em 1em 4em #0b0b0b, -1em -1em 4em #2d2d2d;
       width: 100%;
       padding: 0.5em;
-      @include mixins.flex(column, flex-start, center);
+      @include mixins.flex(row, flex-start, center);
       gap: 1em;
       border-radius: 1em;
       //  RESPONSIVE
@@ -40,22 +40,23 @@
       }
     }
     &-img {
-      width: 40%;
+      width: 100%;
+      height: auto;
       & img {
         width: 100%;
         border-radius: 1em;
         box-shadow: 0 0 0.4em #fff;
-        object-fit: cover;
+        object-fit: contain;
+        
       }
     }
     &-description {
-      transition: all 0.4s ease;
       backdrop-filter: blur(1em);
       color: #fff;
       height: 100%;
     }
     &-p {
-      text-align: start;
+      text-align: left;
     }
 
     &--bottom {

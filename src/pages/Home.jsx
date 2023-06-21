@@ -8,4 +8,3 @@ export const Home = () =>
             <h2 className="Home-h2">Frontend <span>{"{"}</span> JavaScript <span>{"}"}</span></h2>
         </div>
     </section>
-

@@ -99,8 +99,7 @@ export const Header = () => {
           <button
             className="Container-btn"
             onClick={() => {
-              setClick(!click);
-              setTimeout(() => setClick(false), 3000);
+              setClick(!click);              
             }}
             style={{ transform: `rotate(${click ? 90 : 0}deg)` }}
           >
