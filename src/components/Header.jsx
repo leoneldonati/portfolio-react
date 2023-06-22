@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
-import "../sass/styles/Header.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { GithubSvg } from "../styled-components/github-svg";
+import "../sass/styles/Header.scss";
 
 export const Header = () => {
   const [click, setClick] = useState(false);
@@ -72,13 +73,16 @@ export const Header = () => {
             </li>
           </ul>
         </nav>
+
         <nav className="Container-nav--2">
           <ul
             className="Container-ul--2"
             style={{
-              transform: `translateY(${click ? 0 : -170}%)`,
+              transform: `translateY(${click ? 0 : 200}%)`,
               pointerEvents: `${click ? "all" : "none"}`,
+              opacity: click ? 1 : 0,
             }}
+            onClick={() => setClick(false)}
           >
             <li>
               <Link to="/about">
@@ -99,9 +103,8 @@ export const Header = () => {
           <button
             className="Container-btn"
             onClick={() => {
-              setClick(!click);              
+              setClick(!click);
             }}
-            style={{ transform: `rotate(${click ? 90 : 0}deg)` }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -110,6 +113,7 @@ export const Header = () => {
               fill="currentColor"
               className="Btn-svg"
               viewBox="0 0 16 16"
+              style={{ transform: `rotate(${click ? 90 : 0}deg)` }}
             >
               <path
                 fillRule="evenodd"
@@ -120,9 +124,7 @@ export const Header = () => {
         </nav>
 
         <nav className="Container-nav--2">
-          <ul
-            className="Container-ul2--desktop"
-          >
+          <ul className="Container-ul2--desktop">
             <li>
               <Link to="/about">
                 <span>About</span>
@@ -140,7 +142,6 @@ export const Header = () => {
             </li>
           </ul>
         </nav>
-        
       </div>
     </header>
   );
