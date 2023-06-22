@@ -5,11 +5,12 @@
   @include mixins.flex(row, space-between, flex-start);
   padding: 1em;
   gap: 4em;
+  position: relative;
   &-btn {
     display: block;
-    position: fixed;
+    position: absolute;
+    bottom: -8%;
     left: 5%;
-    bottom: 1%;
     backdrop-filter: blur(1em);
     padding: 0.7em;
     border-radius: 50%;
